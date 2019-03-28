@@ -1,0 +1,49 @@
+{
+	"name": "nifti-to-mips",
+	"label": "NIFTI to MIPS",
+	"description": "Created by the gear builder. Edit the manifest file to give this gear a description!",
+	"version": "1",
+	"inputs": {
+		"api-key": {
+			"base": "api-key"
+		},
+		"nifti": {
+			"base": "file",
+			"description": "Any nifti file.",
+			"optional": false,
+			"type": {
+				"enum": [
+					"nifti"
+				]
+			}
+		}
+	},
+	"config": {
+		"threshold_percentile": {
+			"default": 98.5,
+			"description": "The percentile at which to threshold maximum values",
+			"type": "number"
+		}
+	},
+	"environment": {
+		"GPG_KEY": "0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D",
+		"LANG": "C.UTF-8",
+		"PATH": "/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+		"PYTHON_PIP_VERSION": "19.0.3",
+		"PYTHON_VERSION": "3.7.2"
+	},
+	"command": "./nifti_to_mips.py",
+	"author": "Kaleb Fischer",
+	"maintainer": "Kaleb Fischer",
+	"cite": "List citations here.",
+	"license": "Other",
+	"source": "",
+	"url": "",
+	"custom": {
+		"gear-builder": {
+			"category": "converter",
+			"container": "4b8a4869c12ee7e74e820a5a0e93d7274fe8b892c01b08d2b3e5f82221684f69",
+			"image": "gear-builder-xwaxyhcnvm-20190327132224"
+		}
+	}
+}
